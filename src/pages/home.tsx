@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import NavBar from '../components/home/navBar'
 import Hero from '../components/home/hero'
+import AboutUs from '../components/about/aboutUs'
 
 function Home() {
   const scrollRef = useRef<HTMLElement>(null)
@@ -14,6 +15,13 @@ function Home() {
 
       <section id="inicio" className="h-screen snap-start bg-cream-50">
         <Hero />
+      </section>
+
+      <section
+        id="nosotros"
+        className="flex h-screen snap-start items-center bg-cream-100"
+      >
+        <AboutUs />
       </section>
 
       <section

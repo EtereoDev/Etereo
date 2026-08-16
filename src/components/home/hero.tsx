@@ -66,22 +66,23 @@ function Hero() {
           variants={item}
           className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-brand-600"
         >
-          Velas artesanales
+          Materia · Rito · Memoria
         </motion.p>
 
         <motion.h1
           variants={item}
           className="font-display text-5xl font-medium leading-[1.05] text-ink-900 sm:text-6xl md:text-7xl"
         >
-          Luz y aroma para
-          <span className="block italic text-brand-600">tus momentos</span>
+          Objetos que
+          <span className="block italic text-brand-600">respiran.</span>
         </motion.h1>
 
         <motion.p
           variants={item}
           className="mt-6 max-w-xl text-base leading-relaxed text-ink-500 sm:text-lg"
         >
-          Velas artesanales.
+          Concreto, estuco y cera. Hecho a mano, una pieza a la vez, en Medellín,
+          Colombia.
         </motion.p>
 
         <motion.div
@@ -92,7 +93,7 @@ function Hero() {
             href="#producto"
             className="inline-flex items-center gap-2 rounded-full bg-ink-900 px-8 py-3.5 text-sm font-semibold text-cream-50 shadow-lg shadow-ink-900/15 transition-all hover:-translate-y-0.5 hover:bg-ink-700"
           >
-            Descubrir el kit
+            Conoce la colección
           </a>
           <a
             href="#carrusel"
