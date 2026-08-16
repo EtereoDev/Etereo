@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import NavBar from '../components/home/navBar'
 import Hero from '../components/home/hero'
 import AboutUs from '../components/about/aboutUs'
+import Footer from '../components/home/footer'
 
 function Home() {
   const scrollRef = useRef<HTMLElement>(null)
@@ -44,6 +45,8 @@ function Home() {
       >
         <span className="font-display text-3xl italic text-ink-400">Contacto</span>
       </section>
+
+      <Footer />
     </main>
   )
 }
