@@ -1,4 +1,5 @@
-import { motion, useReducedMotion, type Variants } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
+import Fire from '../common/fire'
 
 const container: Variants = {
   hidden: {},
@@ -8,37 +9,6 @@ const container: Variants = {
 const item: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-}
-
-function FooterFlame() {
-  const reduce = useReducedMotion()
-
-  return (
-    <motion.svg
-      width="34"
-      height="48"
-      viewBox="0 0 60 84"
-      fill="none"
-      aria-hidden="true"
-      animate={reduce ? undefined : { scaleY: [1, 1.1, 0.94, 1.05, 1] }}
-      transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut' }}
-      style={{ originY: 0.68 }}
-    >
-      <path
-        d="M30 2c-4.5 5.8-20 17.5-20 36.5a20 20 0 0 0 40 0C50 19.5 34.5 7.8 30 2Z"
-        fill="#ffd8ab"
-        fillOpacity="0.12"
-      />
-      <path
-        d="M30 2c-4.5 5.8-20 17.5-20 36.5a20 20 0 0 0 40 0C50 19.5 34.5 7.8 30 2Z"
-        fill="#ffaf4f"
-      />
-      <path
-        d="M30 16c2.8 4.8 10 11.5 10 19a10 10 0 0 1-20 0c0-7.5 7.2-14.2 10-19Z"
-        fill="#ffd8ab"
-      />
-    </motion.svg>
-  )
 }
 
 function Footer() {
@@ -61,7 +31,7 @@ function Footer() {
         className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 text-center"
       >
         <motion.div variants={item} className="mb-10">
-          <FooterFlame />
+          <Fire className="h-10 w-auto sm:h-12" />
         </motion.div>
 
         <motion.p

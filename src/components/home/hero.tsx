@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion'
+import Fire from '../common/fire'
 
 const container: Variants = {
   hidden: {},
@@ -8,36 +9,6 @@ const container: Variants = {
 const item: Variants = {
   hidden: { opacity: 0, y: 28 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-}
-
-function HeroFlame() {
-  return (
-    <motion.div
-      animate={{ scale: [1, 1.05, 0.97, 1.03, 1] }}
-      transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-      className="flex h-24 items-end justify-center"
-      aria-hidden="true"
-    >
-      <svg width="60" height="84" viewBox="0 0 60 84" fill="none">
-        <path
-          d="M30 2c-4.5 5.8-20 17.5-20 36.5a20 20 0 0 0 40 0C50 19.5 34.5 7.8 30 2Z"
-          fill="#ffaf4f"
-          fillOpacity="0.2"
-        />
-        <path
-          d="M30 2c-4.5 5.8-20 17.5-20 36.5a20 20 0 0 0 40 0C50 19.5 34.5 7.8 30 2Z"
-          fill="#e8942f"
-        />
-        <motion.path
-          d="M30 16c2.8 4.8 10 11.5 10 19a10 10 0 0 1-20 0c0-7.5 7.2-14.2 10-19Z"
-          fill="#ffd8ab"
-          animate={{ scaleY: [1, 1.12, 0.92, 1.05, 1], scaleX: [1, 0.95, 1.04, 1] }}
-          transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
-          style={{ originX: 0.5, originY: 0.62 }}
-        />
-      </svg>
-    </motion.div>
-  )
 }
 
 function Hero() {
@@ -59,7 +30,7 @@ function Hero() {
         className="flex flex-col items-center"
       >
         <motion.div variants={item} className="mb-10">
-          <HeroFlame />
+          <Fire className="h-20 w-auto sm:h-24" />
         </motion.div>
 
         <motion.p
